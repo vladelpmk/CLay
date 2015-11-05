@@ -1,0 +1,20 @@
+{
+	"name": "CLay",
+	"version": "0.0.1",
+	"private": true,
+	"description": "CLay test assignment",
+	"main": "app/index.html",
+	"author": "Vladimir <gorgievski.vladimit.l@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vladelpmk/CLay"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"bower": "1.3.12",
+		"gulp": "3.8.11",
+        "gulp-less": "2.0.1"
+	},
+	"scripts": {}
+}
