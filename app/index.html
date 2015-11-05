@@ -9,15 +9,16 @@
 	<meta name="author" content="Clay">
 
 	<link href='//fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    
+
 	<title>CLay test assignment</title>
 
 	<link rel="stylesheet" href="css/app.css" />
 </head>
 
 <body ng-controller="AppCtrl">
-	<h1>CLay test assignment</h1>
-    <h2>{{test}}</h2>
+    <div class="content">
+		<div ui-view="app"></div>
+	</div>
 	<script src="vendor/requirejs/require.js" data-main="main.js"></script>
 </body>
 

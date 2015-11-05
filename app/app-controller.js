@@ -1,15 +1,15 @@
 define([
 ], function () {
 
-	/**
-	 * @ngdoc function
-	 * @name clayApp.controller:AppCtrl
-	 * @description
-	 * The main application controller
-	 */
-	var AppCtrl = function ($scope) {
-		$scope.test = "gorgievski.vladimir.l@gmail.com";
+	var AppCtrl = function ($scope, $state, TranslateFactory) {
+
+		var init = function () {
+            TranslateFactory.changeLanguage('nl_NL');
+			//$state.go('app.login');
+		};
+
+		init();
 	};
 
-	return ['$scope', AppCtrl];
+	return ['$scope', '$state', 'TranslateFactory', AppCtrl];
 });

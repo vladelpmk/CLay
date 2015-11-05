@@ -10,7 +10,16 @@ require.config({
 		// vendor libaries - for core
 		'jquery': 'vendor/jquery/dist/jquery',
 		'angular': 'vendor/angular/angular',
+		'angular-ui-router': 'vendor/angular-ui-router/release/angular-ui-router',
+		'angular-ui-router-extras': 'vendor/ui-router-extras/release/ct-ui-router-extras',
+        'angular-translate': 'vendor/angular-translate/angular-translate',
+		'angular-translate-loader-static-files': 'vendor/angular-translate-loader-static-files/angular-translate-loader-static-files',
 		'bootstrap': 'vendor/bootstrap/dist/js/bootstrap',
+		'bootstrap': 'vendor/bootstrap/dist/js/bootstrap',
+		'oclazyload': 'vendor/oclazyload/dist/ocLazyLoad',
+        
+        //components
+        'clayTranslate': 'components/translate/translate',
 	},
 
 	// define dependencies among libraries
@@ -22,6 +31,11 @@ require.config({
 		'jquery': {
 			exports: '$'
 		},
-		'bootstrap': ['jquery']
+		'angular-ui-router': ['angular'],
+		'angular-ui-router-extras': ['angular-ui-router'],
+        'angular-translate': ['angular'],
+		'angular-translate-loader-static-files': ['angular-translate'],
+		'bootstrap': ['jquery'],
+		'oclazyload': ['angular']
 	}
 });

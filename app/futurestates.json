@@ -1,0 +1,8 @@
+[
+	{
+		"stateName": "app.login",
+		"urlPrefix": "/login",
+		"type": "ocLazyLoad",
+		"module": "clayLogin"
+	}
+]

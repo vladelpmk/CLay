@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    less = require('gulp-less');
+	less = require('gulp-less');
 
 // all JS files for the application (not vendor files)
 var appjs = [
@@ -11,7 +11,6 @@ var appjs = [
 var cssfiles = [
 			'app/vendor/fontawesome/css/font-awesome.css',
 			'app/vendor/bootstrap/dist/css/bootstrap.css',
-			'app/css/app.css'
 		];
 
 
@@ -38,12 +37,12 @@ gulp.task('less', function(){
 });
 
 // watch less css file changes
-gulp.task('watchless', function() {
+gulp.task('watchless', function () {
 	var watch = require('gulp-watch');
 	var watcher = gulp.watch('app/css/less/*.less', ['less']);
-	watcher.on('change', function(event) {
+	watcher.on('change', function (event) {
 		console.log('Running LESS.');
-		console.log('Event type: '+event.type); // added, changed, or deleted
-		console.log('Event path: '+event.path); // The path of the modified file
+		console.log('Event type: ' + event.type); // added, changed, or deleted
+		console.log('Event path: ' + event.path); // The path of the modified file
 	});
 });
