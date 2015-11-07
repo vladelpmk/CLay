@@ -1,0 +1,53 @@
+.login-lang {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	.dropdown {
+		button {
+			background: transparent;
+			color: @white;
+			border: 1px solid @white;
+			width: 105px;
+			text-align: center;
+		}
+		.dropdown-menu {
+			width: 105px;
+			min-width: 105px;
+		}
+	}
+}
+.login-container {
+	margin-top: 70px;
+	.login-logo-container {
+		text-align: center;
+	}
+	.login-form {
+		margin: 50px 0px 0px 0px;
+		h2 {
+			margin-bottom: 20px;
+		}
+		h2,
+		label {
+			font-weight: 300;
+		}
+		.form-control {
+			margin-bottom: 15px;
+		}
+		.error {
+			color: @redish;
+		}
+		.error::before {
+			content: "*";
+		}
+		button {
+			font-weight: 600;
+		}
+	}
+}
+.login-other-actions {
+    margin-top: 10px;
+	a {
+        text-align: right;
+		margin-left: 5px;
+	}
+}

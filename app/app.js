@@ -12,7 +12,10 @@ define([
         'ui.router',
         'ct.ui.router.extras',
         'oc.lazyLoad',
-        'clayTranslate']);
+        'clayTranslate',
+        'clayLanguage',
+        'clayAuth'
+        ]);
 
 	clayApp.config(['$ocLazyLoadProvider', '$stateProvider', '$futureStateProvider', '$urlRouterProvider',
 		function ($ocLazyLoadProvider, $stateProvider, $futureStateProvider, $urlRouterProvider) {
@@ -25,6 +28,10 @@ define([
 					reconfig: true,
 					name: 'clayLogin',
 					files: ['sections/login/login']
+				}, {
+					reconfig: true,
+					name: 'clayDashboard',
+					files: ['sections/dashboard/dashboard']
 				}]
 			});
 
@@ -55,10 +62,18 @@ define([
 				abstract: true,
 				views: {
 					'app': {
-						template: '<div ui-view="master" class="master"></div>'
+						templateUrl: 'components/layout/layout-login.html'
 					}
 				}
-			});
+			}).state('app.nav0', {
+					abstract: true,
+					url: "",
+					views: {
+						'master': {
+							templateUrl: 'components/layout/layout-dashboard.html'
+						}
+					}
+				});
 
 			$urlRouterProvider
 				.when('', '/login')
@@ -75,8 +90,6 @@ define([
 			$rootScope.$stateParams = $stateParams;
 		}
 	]);
-
-
 
 	return clayApp;
 });

@@ -1,0 +1,95 @@
+.workspace {}
+.breadcrumb {
+	padding-left: 0px;
+	background-color: transparent;
+}
+.bissy {
+	opacity: 0.8;
+}
+.dash-door {
+	background: @mainLight;
+	padding: 10px;
+	h2 {
+		margin: 0px 0px 10px 5px;
+		font-weight: 300;
+		span {
+			font-size: 12px;
+			margin-top: 20px;
+			i {
+				margin-left: 5px;
+			}
+		}
+	}
+	.image-map {
+		height: 150px;
+		margin-bottom: 10px;
+		position: relative;
+		.controls {
+			background: @mainTransparent;
+			position: absolute;
+			bottom: 0px;
+			z-index: 99;
+			width: 100%;
+			text-align: center;
+			span {
+				margin: 0px 5px;
+			}
+			a {
+				cursor: pointer;
+			}
+			.active {
+				color: @sweet;
+			}
+		}
+		.image-item,
+		.map-item {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			height: 150px;
+			background-position: center center;
+			background-size: cover;
+		}
+	}
+	.description {
+		height: 30px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		font-size: 11px;
+	}
+	.accessability {
+		margin-bottom: 10px;
+		span {
+			display: inline-block;
+			position: relative;
+			margin: 3px;
+			a {
+				cursor: pointer;
+				img:hover {
+					border-color: @sweet;
+				}
+			}
+			.tooltip {
+				display: none;
+				position: absolute;
+				left: 0px;
+				bottom: 52px;
+				padding: 5px;
+				color: @black;
+				background: @white;
+				min-width: 200px;
+				-webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+				box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+			}
+		}
+		span:hover {
+			.tooltip {
+				display: inline-block;
+				opacity: 1;
+			}
+		}
+	}
+}

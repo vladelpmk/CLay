@@ -1,16 +1,30 @@
 <div class="container">
-    <img ng-src="images/logo_clay-white.png">
-	<form class="form-signin">
-		<h2 class="form-signin-heading" translate='LANG_PLEASE_SIGN_IN'></h2>
-		<label for="inputEmail" class="sr-only">Email address</label>
-		<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-		<label for="inputPassword" class="sr-only">Password</label>
-		<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-		<div class="checkbox">
-			<label>
-				<input type="checkbox" value="remember-me"> Remember me
-			</label>
+	<div class="login-container col-sm-4 col-sm-offset-4">
+		<div class="row login-logo-container">
+			<img class="" ng-src="images/logo_clay-white.png" alt="CLay logo">
 		</div>
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-	</form>
+		<form class="row login-form">
+			<h2 class="form-signin-heading" translate='LANG_PLEASE_SIGN_IN'></h2>
+			<label class="pull-right error" ng-if="user.generalErrorLabel.length > 0" translate="{{user.generalErrorLabel}}"></label>
+			<label for="inputEmail" translate="LANG_EMAIL_ADDRESS"></label>
+			<label class="pull-right error" ng-if="user.usernameErrorLabel.length > 0" translate="{{user.usernameErrorLabel}}"></label>
+			<input ng-model="user.username" class="form-control" placeholder="{{'LANG_EMAIL_ADDRESS' | translate}}" autofocus>
+			<label for="inputPassword" translate="LANG_PASSWORD"></label>
+			<label class="pull-right error" ng-if="user.passwordErrorLabel.length > 0" translate="{{user.passwordErrorLabel}}"></label>
+			<input type="password" ng-model="user.password" class="form-control" placeholder="{{'LANG_PASSWORD' | translate}}">
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="user.rememberMe"> {{'LANG_REMEMBER_ME' | translate}}
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" ng-click="submitLogin()" translate="LANG_SIGN_IN"></button>
+		</form>
+		<div class="row">
+			<div class="col-sm-12 login-other-actions">
+				<a class="pull-right" href="javascript: void(0);"><i class="fa fa-refresh"></i> Forgot Password</a>
+				<br/>
+				<a class="pull-right" href="javascript: void(0);"><i class="fa fa-sign-in"></i> Sign Up</a>
+			</div>
+		</div>
+	</div>
 </div>

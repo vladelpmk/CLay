@@ -1,15 +1,20 @@
-define([
-], function () {
+define([], function () {
 
-	var AppCtrl = function ($scope, $state, TranslateFactory) {
+	var AppCtrl = function ($scope, $state, $location, TranslateFactory, AuthFactory) {
 
-		var init = function () {
-            TranslateFactory.changeLanguage('nl_NL');
-			//$state.go('app.login');
-		};
+		$scope.$on('$stateChangeStart',
+			function (event, toState, toParams, fromState, fromParams) {
+				if (toState.data.authreq && !AuthFactory.isAuth()) {
+					$location.path('login');
+				} else if (toState.name === 'app.login' && AuthFactory.isAuth()) {
+					$location.path('dashboard');
+				}
+			});
+
+		var init = function () {};
 
 		init();
 	};
 
-	return ['$scope', '$state', 'TranslateFactory', AppCtrl];
+	return ['$scope', '$state', '$location', 'TranslateFactory', 'AuthFactory', AppCtrl];
 });

@@ -1,1 +1,14 @@
-{"LANG_PLEASE_SIGN_IN": "Please sign in"}
+{
+	"LANG_PLEASE_SIGN_IN": "Please sign in",
+	"LANG_EMAIL_ADDRESS": "Email address",
+	"LANG_PASSWORD": "Password",
+	"LANG_REMEMBER_ME": "Remember me",
+	"LANG_SIGN_IN": "Sign in",
+	"LANG_USERNAME_IS_REQUIRED": "Username is required",
+    "LANG_PASSWORD_IS_REQUIRED": "Password is required",
+    "LANG_WRONG_USERNAME_OR_PASSWORD" : "Wrong username or password",
+    "LANG_NAV_HOME": "Home",
+    "LANG_NAV_PROFILE": "Profile",
+    "LANG_NAV_SETTINGS": "Settings",
+    "LANG_NAV_LOGOUT": "Log out"
+}

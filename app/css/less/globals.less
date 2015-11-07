@@ -1,5 +1,102 @@
-body{
-    background: @main;
-    color: @white;
-    font-family: Lato;
+html {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 50px;
+}
+body {
+	background: @main;
+	color: @white;
+	font-family: 'Open Sans', sans-serif;
+}
+footer {
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	color: @default;
+	a {
+		color: inherit;
+	}
+}
+.green {
+	color: @green;
+}
+.red {
+	color: @redish;
+}
+a {
+	color: @white;
+}
+a:hover {
+	text-decoration: none;
+	color: @sweet;
+}
+a:focus {
+	text-decoration: none;
+	color: inherit;
+}
+.profile-small-circle {
+	width: 50px;
+	border: 3px solid @white;
+	border-radius: 50% !important;
+}
+.button-loading {
+	height: 34px;
+	position: relative;
+	.button-text-overlay {
+		display: block;
+		position: absolute;
+		left: -0px;
+		top: -0px;
+		bottom: -0px;
+		right: -0px;
+		padding-top: 8px;
+		text-align: center;
+	}
+	.button-loading-bar {
+		display: block;
+		position: absolute;
+		left: -1px;
+		top: -1px;
+		bottom: -1px;
+		background: @sweet;
+	}
+	.load-loding {
+		right: -1px;
+		-webkit-animation-name: loading;
+		-webkit-animation-duration: 4s;
+		animation-name: loading;
+		animation-duration: 4s;
+	}
+    
+	@-webkit-keyframes loading {
+		0% {
+			right: 100%;
+		}
+		25% {
+			right: 75%;
+		}
+		50% {
+			right: 50%;
+		}
+		100% {
+			right: -1px;
+		}
+	}
+	/* Standard syntax */
+	@keyframes loading {
+		0% {
+			right: 100%;
+		}
+		25% {
+			right: 75%;
+		}
+		50% {
+			right: 50%;
+		}
+		100% {
+			right: -1px;
+		}
+	}
 }

@@ -2,12 +2,12 @@ define([
 	'angular',
 	'sections/login/login-controller',
 	'sections/login/login-factory',
-], function(angular, LoginCtrl, LoginFactory) {
+], function (angular, LoginCtrl, LoginFactory) {
 
 	var clayLogin = angular.module('clayLogin', []);
 
-	clayLogin.config(['$stateProvider', '$urlRouterProvider', 
-		function($stateProvider, $urlRouterProvider) {
+	clayLogin.config(['$stateProvider', '$urlRouterProvider',
+		function ($stateProvider, $urlRouterProvider) {
 			$stateProvider
 				.state('app.login', {
 					url: "/login",
@@ -15,6 +15,9 @@ define([
 						'master': {
 							templateUrl: 'sections/login/login.html',
 							controller: 'LoginCtrl'
+						},
+						'lang': {
+							templateUrl: 'components/language/language.html',
 						}
 					},
 					data: {
@@ -22,7 +25,7 @@ define([
 					}
 				});
 	}]);
-    
+
 	clayLogin.controller('LoginCtrl', LoginCtrl);
 	clayLogin.factory('LoginFactory', LoginFactory);
 

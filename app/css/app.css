@@ -1,12 +1,321 @@
 @import url('../vendor/bootstrap/dist/css/bootstrap.css');
 @import url('../vendor/fontawesome/css/font-awesome.css');
+@import url('../vendor/flag-icon-css/css/flag-icon.css');
 * {
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
 }
+html {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px;
+}
 body {
   background: #303B33;
   color: #FFF;
-  font-family: Lato;
+  font-family: 'Open Sans', sans-serif;
+}
+footer {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  color: #77694F;
+}
+footer a {
+  color: inherit;
+}
+.green {
+  color: #0CBD0C;
+}
+.red {
+  color: #D62339;
+}
+a {
+  color: #FFF;
+}
+a:hover {
+  text-decoration: none;
+  color: #F43556;
+}
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+.profile-small-circle {
+  width: 50px;
+  border: 3px solid #FFF;
+  border-radius: 50% !important;
+}
+.button-loading {
+  height: 34px;
+  position: relative;
+  /* Standard syntax */
+}
+.button-loading .button-text-overlay {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  padding-top: 8px;
+  text-align: center;
+}
+.button-loading .button-loading-bar {
+  display: block;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  background: #F43556;
+}
+.button-loading .load-loding {
+  right: -1px;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 4s;
+  animation-name: loading;
+  animation-duration: 4s;
+}
+@-webkit-keyframes loading {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 75%;
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    right: -1px;
+  }
+}
+@keyframes loading {
+  0% {
+    right: 100%;
+  }
+  25% {
+    right: 75%;
+  }
+  50% {
+    right: 50%;
+  }
+  100% {
+    right: -1px;
+  }
+}
+.login-lang {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.login-lang .dropdown button {
+  background: transparent;
+  color: #FFF;
+  border: 1px solid #FFF;
+  width: 105px;
+  text-align: center;
+}
+.login-lang .dropdown .dropdown-menu {
+  width: 105px;
+  min-width: 105px;
+}
+.login-container {
+  margin-top: 70px;
+}
+.login-container .login-logo-container {
+  text-align: center;
+}
+.login-container .login-form {
+  margin: 50px 0px 0px 0px;
+}
+.login-container .login-form h2 {
+  margin-bottom: 20px;
+}
+.login-container .login-form h2,
+.login-container .login-form label {
+  font-weight: 300;
+}
+.login-container .login-form .form-control {
+  margin-bottom: 15px;
+}
+.login-container .login-form .error {
+  color: #D62339;
+}
+.login-container .login-form .error::before {
+  content: "*";
+}
+.login-container .login-form button {
+  font-weight: 600;
+}
+.login-other-actions {
+  margin-top: 10px;
+}
+.login-other-actions a {
+  text-align: right;
+  margin-left: 5px;
+}
+.navbar-clay {
+  background: #262F29;
+  margin-bottom: 0px;
+}
+.navbar-clay .navbar-toggle {
+  margin-top: 30px;
+}
+.navbar-clay .navbar-toggle .icon-bar {
+  background: #FFF;
+}
+.navbar-clay .user-managment {
+  display: inline-block;
+  margin-top: 15px;
+}
+.navbar-clay .user-managment a {
+  font-weight: 100 !important;
+  margin-left: 20px;
+}
+.navbar-clay .user-managment a i {
+  margin-right: 5px;
+}
+.navbar-clay .lan-managment {
+  display: inline-block;
+}
+.navbar-clay .navbar-brand {
+  height: auto;
+}
+.navbar-clay .navbar-collapse .navbar-nav {
+  margin: 20px 0px 0px 20px;
+}
+.navbar-clay .navbar-collapse .navbar-nav .active a {
+  color: #F43556 !important;
+}
+.navbar-clay .navbar-collapse .navbar-nav > li a {
+  font-size: 18px;
+  font-weight: 600;
+}
+.navbar-clay .navbar-collapse .navbar-nav > li a:focus {
+  background: inherit;
+  color: inherit;
+}
+.navbar-clay .navbar-collapse .navbar-nav > li a:hover {
+  background: inherit;
+  color: #D62339;
+}
+.navbar-clay .navbar-collapse .navbar-nav .dropdown {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.navbar-clay .navbar-collapse .navbar-nav .dropdown button {
+  background: transparent;
+  color: #FFF;
+  border: 1px solid #FFF;
+  width: 105px;
+  text-align: center;
+}
+.navbar-clay .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
+  width: 105px;
+  min-width: 105px;
+}
+.navbar-clay .navbar-collapse .navbar-nav .dropdown .dropdown-menu a {
+  font-size: 14px;
+  font-weight: 300;
+}
+@media (min-width: 767px) {
+  .dropdown-menu {
+    background-color: #FFF;
+  }
+}
+.breadcrumb {
+  padding-left: 0px;
+  background-color: transparent;
+}
+.bissy {
+  opacity: 0.8;
+}
+.dash-door {
+  background: #262F29;
+  padding: 10px;
+}
+.dash-door h2 {
+  margin: 0px 0px 10px 5px;
+  font-weight: 300;
+}
+.dash-door h2 span {
+  font-size: 12px;
+  margin-top: 20px;
+}
+.dash-door h2 span i {
+  margin-left: 5px;
+}
+.dash-door .image-map {
+  height: 150px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.dash-door .image-map .controls {
+  background: rgba(48, 59, 51, 0.79);
+  position: absolute;
+  bottom: 0px;
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+}
+.dash-door .image-map .controls span {
+  margin: 0px 5px;
+}
+.dash-door .image-map .controls a {
+  cursor: pointer;
+}
+.dash-door .image-map .controls .active {
+  color: #F43556;
+}
+.dash-door .image-map .image-item,
+.dash-door .image-map .map-item {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 150px;
+  background-position: center center;
+  background-size: cover;
+}
+.dash-door .description {
+  height: 30px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 11px;
+}
+.dash-door .accessability {
+  margin-bottom: 10px;
+}
+.dash-door .accessability span {
+  display: inline-block;
+  position: relative;
+  margin: 3px;
+}
+.dash-door .accessability span a {
+  cursor: pointer;
+}
+.dash-door .accessability span a img:hover {
+  border-color: #F43556;
+}
+.dash-door .accessability span .tooltip {
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: 52px;
+  padding: 5px;
+  color: #000;
+  background: #FFF;
+  min-width: 200px;
+  -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.75);
+}
+.dash-door .accessability span:hover .tooltip {
+  display: inline-block;
+  opacity: 1;
 }

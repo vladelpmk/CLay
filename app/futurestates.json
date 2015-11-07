@@ -4,5 +4,11 @@
 		"urlPrefix": "/login",
 		"type": "ocLazyLoad",
 		"module": "clayLogin"
+	},
+    {
+		"stateName": "app.nav0.dashboard",
+		"urlPrefix": "/dashboard",
+		"type": "ocLazyLoad",
+		"module": "clayDashboard"
 	}
 ]

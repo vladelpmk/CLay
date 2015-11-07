@@ -1,0 +1,54 @@
+<div class="row">
+	<div class="col-sm-12">
+		<ol class="breadcrumb">
+			<li><a href="javascript: void(0);">Home</a></li>
+			<li class="active">Dashboard</li>
+		</ol>
+		<h1>Your dors:</h1>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div ng-repeat="door in doors track by $index" class="col-sm-4">
+			<div class="dash-door" ng-init="door.photoShow = 1; door.mapShow = 0;" ng-class="{'bissy':door.bissy}">
+				<h2>{{door.name}}
+                    <span class="pull-right" title="{{door.status}}" ng-class="{'green' : door.status === 'Locked', 'red' : door.status === 'Unlocked'}">
+                        {{door.status}}<i class="fa fa-circle"></i>
+                    </span>
+                </h2>
+				<div class="image-map">
+					<div class="image-item img-responsive" style="background-image:url({{door.img}}); z-index:{{door.photoShow}};"></div>
+					<div class="map-item img-responsive" style="background-image:url({{door.map}});  z-index:{{door.mapShow}};"></div>
+					<div class="controls">
+						<span><a ng-click="door.photoShow = 1; door.mapShow = 0;" ng-class="{'active':door.photoShow}"><i class="fa fa-photo"></i></a></span>
+						<span><a ng-click="door.photoShow = 0; door.mapShow = 1;" class="{'active':door.mapShow}"><i class="fa fa-home"></i></a></span>
+					</div>
+				</div>
+				<p class="description">{{door.description}}</p>
+
+				<div class="accessability">
+					<h5>Accessable by:</h5>
+					<span ng-repeat="user in door.accessableBy">
+                        <a>
+                            <img class="profile-small-circle" src="{{user.img}}"/>
+                        </a>
+                        <div class=tooltip>
+                            {{user.fullName}}
+                            <br/>
+                            {{user.timePeriod}}
+                        </div>
+                    </span>
+				</div>
+
+				<div class="actions">
+                    <button class="btn btn-primary btn-block button-loading" ng-click="unlockForMinute(door)" ng-class="{'disabled':door.bissy}">
+                        <span class="button-loading-bar" ng-class="{'load-loding':door.bissy}"></span>
+                        <span class="button-text-overlay">Unlock for 1 minute</span>
+                    </button>
+					<button class="btn btn-primary btn-block" ng-click="">Edit info</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

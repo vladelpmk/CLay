@@ -5,6 +5,7 @@ define([
     'angular-ui-router-extras',
 	'bootstrap',
     'oclazyload',
-    'clayTranslate'
-    
-], function() {});
+    'clayTranslate',
+    'clayLanguage',
+    'clayAuth'
+], function () {});

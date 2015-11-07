@@ -1,1 +1,14 @@
-{"LANG_PLEASE_SIGN_IN": "Log in alstublieft"}
+{
+	"LANG_PLEASE_SIGN_IN": "Log in alstublieft",
+	"LANG_EMAIL_ADDRESS": "E-mailadres",
+	"LANG_PASSWORD": "Wachtwoord",
+	"LANG_REMEMBER_ME": "Onthoud me",
+	"LANG_SIGN_IN": "Aanmelden",
+	"LANG_USERNAME_IS_REQUIRED": "Gebruikersnaam is verplicht",
+	"LANG_PASSWORD_IS_REQUIRED": "Een wachtwoord is verplicht",
+	"LANG_WRONG_USERNAME_OR_PASSWORD": "Verkeerde gebruikersnaam of wachtwoord",
+	"LANG_NAV_HOME": "Thuis",
+	"LANG_NAV_PROFILE": "Profiel",
+	"LANG_NAV_SETTINGS": "Instellingen",
+    "LANG_NAV_LOGOUT": "Uitloggen"
+}
